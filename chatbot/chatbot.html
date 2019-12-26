@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <title>Chat Bot</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: 'Oswald',sans-serif;
+        }
+        .chat-bot-1{
+            background-color: #fcfcfc;
+
+        }
+    .chat-bot{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:100vh;
+        background-color: #fcfcfc;
+      
+    }
+
+    .chat-content{
+        width:380px;
+        height:195px;
+        background-color:#fcfcfc;
+        position: relative;
+       z-index: 1;
+       border-radius: 5px;
+       display: none;
+       transition:all 1.5s ease-in;
+        
+    }
+    .chat-content::before{
+        content: "";
+        width: 90px;
+        height: 80px;
+        position: absolute;
+        top:-20px;
+        left:10px;
+        background-color:#ed2b47;
+        border:1px solid transparent;
+        border-radius: 50%;
+        z-index: -1;
+       
+        
+        
+        
+    }
+    .content-1{
+        height:110px;
+        background-color:#ed2b47;
+        border-top:1px solid transparent;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .content-2{
+        height:85px;
+        background-color:white;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-radius: 5px;
+    }
+    .head{
+        display: flex;
+    }
+    .head h3{
+        color: #ffff;
+    font-size: 20px;
+    padding-left: 21px;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    }
+    img{
+        width: 75px;
+    height: 62px;
+    border-radius: 50%;
+    margin-left: 19px;
+    margin-top: -17px;
+    }
+    p{
+        
+    color: white;
+    font-size: 14px;
+    padding-left: 25px;
+    padding-top: 12px;
+
+    }
+    textarea{
+        width: 100%;
+    height: 100%;
+    resize: none;
+    border: 1px solid white;
+    overflow: s;
+    }
+    textarea[placeholder]{
+        padding-top: 30px;
+    display: flex;
+    font-size: 15px;
+    padding-left: 19px;
+    outline: none;
+
+    }
+    .chatbot-button{
+        text-align: center;
+    margin-top: -6vw;
+    padding-left: 68px;
+    margin-left: 18vw;
+    }
+    button{
+        width:60px;
+        height:50px;
+        color:white;
+        background-color:#ed2b47;
+        border:1px solid  #a7a6a6;
+        border-radius: 5px;
+        cursor:pointer;
+    }
+    </style>
+</head>
+<body>
+     <div class="chat-bot-1">
+         <div class="chat-bot" >
+         <div class="chat-content" id="shac">
+             <div class="content-1">
+                 <div class="head">
+                     <img src="images/as.jpg" alt="photo"/>
+                     <h3>Adarsh Sharma</h3>
+                 </div>
+                 <section>
+                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing  Fugit sed est perferendis nam cumque </p>
+                 </section>
+             </div>
+             <div class="content-2">
+                  
+                    <textarea placeholder="Type your message..."></textarea>
+             </div>
+         </div>
+                    </div>
+                    <div class="chatbot-button">
+                          <button><i  class="fa fa-comment fa-2x" aria-hidden="true" id="tog" onclick="dis()" ></i></button>
+                    </div>
+     </div>
+    <script>
+    const dis=()=>{
+ let accd=document.getElementById("shac");
+
+ if(accd.style.display==="block")
+ {
+    accd.style.display="none";
+ }
+    else{
+        accd.style.display="block";
+    }
+
+    let tg=document.getElementById("tog");
+    tg.classList.toggle("fa-commenting");
+}
+    
+    </script> 
+
+</body>
+</html>
